@@ -245,6 +245,7 @@ const captureSnapshot = async () => {
  ```
 In the code above, we refference a canvas using the useRef `processedVid` and draw in the image captured by the user using a draw image method. The image is then passed to tesseract where it is decoded, cleaned and assigned to the output variable using a use state hook. The function is async because it awaits the `stopCamHandler` function
 
+At this point, we will then pass the decoded text to cloudinary through an image containing all the texts the webcam has decoded
  ```
   const uploadVideo = async (base64) => {
     console.log("uploading to backend...");
@@ -262,4 +263,4 @@ In the code above, we refference a canvas using the useRef `processedVid` and dr
   };
 
 ```
- At this point, we will then pass the decoded text to cloudinary through an image containing all the texts the webcam has decoded.
+THats it!. Ensure to go through the atrictle to enjoy the experience
